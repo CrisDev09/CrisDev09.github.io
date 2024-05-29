@@ -2,6 +2,9 @@
     --color-1: rgb(243, 244, 245);
     --color-2: rgb(39 197 96);
     --color-3: rgb(198, 232, 211);
+    --color-4:rgb(232, 232, 232);
+    --color-5: #fefefe;
+    --color-clipy-path: #e5ffe9;
 
     --text-color-main: rgb(0, 0, 0);
     --text-color-second: rgb(45, 45, 45);
@@ -17,12 +20,17 @@
     --cubic-header:rgba(39, 197, 97, 0.63);
     --h_img_light: block;
     --h_img_dark: none;
+
+    --gradien: linear-gradient(90deg, rgb(217, 245, 153) 0%, rgba(17,168,50,1) 100%);
 }
 
 :root[data-theme="dark"]{
     --color-1: rgba(31, 41, 55, 1);
     --color-2: rgb(39 197 96);
     --color-3: rgb(49, 65, 88);
+    --color-4:rgb(35, 47, 62);
+    --color-5: #bcd7c5;
+    --color-clipy-path: #f8fff9;
 
 
     --text-color-main: rgb(227, 227, 227);
@@ -45,6 +53,7 @@
 
     --h_img_light: none;
     --h_img_dark: block;
+    --gradien: linear-gradient(45deg, rgba(4,1,60,1) 0%, rgba(3,130,73,1) 35%, rgba(0,126,152,1) 100%);
 }
 body{
     background-color: var(--color-1);
@@ -68,6 +77,13 @@ body{
     .navbar-brand{
         color: var(--color-2);
         font-weight: 500;
+        .img_logo{
+            width: 150px;
+
+            img{
+                width: 100%;
+            }
+        }
     }
     .nav{
         margin-left: auto;
@@ -199,8 +215,65 @@ body{
 }
 
 .section_class{
-
+    padding: 100px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+.bg_gray{
+    background-color: var(--color-4);
+}
+
+.containt_about{
+    display: flex;
+    /* background: var(--gradien); */
+    border-radius: 30px;
+}
+
+.bg_box_about_text{
+    position: relative;
+    background-color: var(--color-5);
+    margin: 20px;
+    border-radius: 20px;
+    padding: 30px;
+    flex: 0 0 55%;
+    overflow: hidden;
+
+    h2{
+        font-size: 3rem;
+        text-align: center;
+        margin-top: 30px;
+        margin-bottom: 25px;
+        position: relative;
+        z-index: 1;
+
+        span{
+            color: var(--color-2);
+        }
+    }
+    p{
+        text-align: center;
+        font-size: 1.2rem;
+        margin-top: 0;
+        padding-top: 0;
+        line-height: 25px;
+        position: relative;
+        z-index: 1;
+    }
+}
+.bg_box_about_text::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-clipy-path);
+    top: 94px;
+    left: 0;
+    z-index: 0;
+    clip-path: circle(560px at 50% 600px);
+}
+
 
 
 
