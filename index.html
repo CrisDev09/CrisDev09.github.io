@@ -15,8 +15,9 @@
 
             const storageTheme = localStorage.getItem('theme');
             const systemColorSheme = window.matchMedia('(prefers-color-scheme: dark)').matches
+            const sysTemSheme =  systemColorSheme ? 'light' : 'dark';
 
-            const newTheme = storageTheme ?? systemColorSheme;
+            const newTheme = storageTheme ?? sysTemSheme;
 
 
             document.documentElement.setAttribute('data-theme', newTheme);
