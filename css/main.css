@@ -1,0 +1,10 @@
+/* ============================================
+   MAIN - Archivo principal que importa todos los estilos
+   ============================================ */
+
+@import url('base.css');
+@import url('utilities.css');
+@import url('layout.css');
+@import url('components.css');
+
+/* Estilos adicionales específicos por página se importan en cada HTML */

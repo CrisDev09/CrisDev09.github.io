@@ -1,0 +1,86 @@
+/* ============================================
+   LAYOUT - Estructura general del sitio
+   ============================================ */
+
+/* Contenedor principal */
+.layout-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header y Navegación */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    padding: 1rem 1.5rem;
+}
+
+@media (min-width: 1024px) {
+    header {
+        padding: 1rem 5rem;
+    }
+}
+
+/* Main */
+main {
+    flex: 1;
+    padding: 3rem 1.5rem;
+    max-width: 80rem;
+    margin: 0 auto;
+    width: 100%;
+}
+
+@media (min-width: 1024px) {
+    main {
+        padding: 3rem 5rem;
+    }
+}
+
+/* Footer */
+footer {
+    padding: 3rem 1.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+@media (min-width: 1024px) {
+    footer {
+        padding: 3rem 5rem;
+    }
+}
+
+/* Secciones */
+section {
+    margin-bottom: 3rem;
+}
+
+/* Contenedores con ancho máximo */
+.container {
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.container-sm {
+    max-width: 64rem;
+    margin: 0 auto;
+}
+
+.container-xs {
+    max-width: 56rem;
+    margin: 0 auto;
+}
+
+/* Aspect ratios */
+.aspect-video {
+    aspect-ratio: 16 / 10;
+}
+
+.aspect-square {
+    aspect-ratio: 1 / 1;
+}
+
+.aspect-portrait {
+    aspect-ratio: 4 / 5;
+}
